@@ -1,7 +1,7 @@
 What's My Wine?
 =============
 
-Project for Wines of the World I
+Project for Wines of the World.
 
-Answer a few questions and get instant wine recommendations!
+Get spot-on wine recommendations with just a few clicks.
 
