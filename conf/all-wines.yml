@@ -1,0 +1,261 @@
+# Week 1 Wines
+
+Wine(kingEstate):
+    name: 2011 King Estate Pinot Gris
+    color: white
+    location: Willamette Valley, Oregon
+    world: new
+    style: 2
+    price: 15
+    alc: 13.0
+    oaked: No
+    description: Light straw with emerald green hue. Aromas of green apple, citrus, honeysuckle, white peach, apricot and floral notes. Flavors of pear, melon, lemon and lime, wet stone, kiwi and honey. The palate has a soft, rich entry, nice texture, good weight and a long, lively crisp finish.
+    image: king.jpg
+
+Wine(hugelGris):
+    name: 2007 Hugel Pinot Gris
+    color: white
+    location: Alsace, France
+    world: old
+    style: 1
+    price: 18
+    alc: 13.0
+    oaked: No
+    description: A fantastic vintage for this wine, ripe creamy but totally dry and sooooo food friendly with white meat dishes, pasta and mushroom based dishes such as rizotto. A wine that will still improve for years, building up its length and complexity for easily another 5 years.
+    image: hugel.jpg
+
+Wine(lamorChardUnoaked):
+    name: 2010 Lamoreaux Landing Unoaked Chardonnay
+    color: white
+    location: Finger Lakes, NY
+    world: new
+    style: 2
+    price: 18
+    alc: 13.2
+    oaked: No
+    description: Fruit for this wine was specially chosen in the vineyard for balance and harvested at the peak of ripeness.  Enjoy with fish, poultry and artisan cheeses.
+    image: lamoreaux.jpg
+
+Wine(lamorChardOaked):
+    name: 2008 Lamoreaux Landing Reserve (Chardonnay)
+    color: white
+    location: Finger Lakes, NY
+    world: new
+    style: 3
+    price: 18
+    alc: 12.8
+    oaked: No
+    description: Aromas of Asian pear, honey, and toasty oak are followed by flavors of creamy fruit and spice. A satisfying balance of fruit and oak characteristics is achieved from sur lie aging in oak barrels, with partial malolactic fermentation. Complex and engaging on the palate, it is a classic match for the finest cheeses, seafood, poultry or pasta dishes in butter, cream sauce, or extra virgin olive oil.
+    image: lamoreaux.jpg
+
+Wine(ruffinoChianti):
+    name: 2008 Ruffino Ducale Chianti
+    color: red
+    location: Tuscany, Italy
+    world: old
+    style: 2
+    price: 18
+    alc: 13.0
+    oaked: No
+    description: Ruby red in color, with garnet hues. Riserva Ducale is characterized by particularly fragrant, sweet cherry and red berry fruit notes. Delicately spicy hints of tobacco and white pepper lead into aromas of roses and a touch of flint. Well-balanced on the palate, the taste reveals velvety tannins and good acidity, a fruity core spiced with cacao and clove, and a lingering finish of rosemary and figs.
+    image: ruffino_ducale.jpg
+
+Wine(ferrariCarano):
+    name: 2010 Ferrari Carano Siena
+    color: red
+    location: Sonoma County, CA
+    world: new
+    style: 2
+    price: 18
+    alc: 14.1
+    oaked: Yes
+    description: Siena has delicious aromas and flavors of freshpicked blackberries, raspberry jam, cola, cinnamon and clove. Sweet oak notes of vanilla and butterscotch complement lingering tart cherry, cranberry and strawberry. A wine with nice acidity and refined, elegant texture, Siena has tannins that are showy and evenly coat the palate.
+    image: siena.jpg
+
+# Week 2 Wines
+
+Wine(twoOceans):
+    name: 2011 Two Oceans Sauvignon Blanc
+    color: white
+    location: Western Cape, South Africa
+    world: new
+    style: 2
+    price: 9
+    alc: 11.7
+    oaked: No
+    description: Expect loads of lemon and a touch of fresh cut grass on the nose with full citrus backup playing the palate profile and singing summer from fresh start to vibrant finish. Consider pairing this pretty Sauvignon Blanc with grilled seafood, chicken and an array of veggie-themed hors d'oeuvres.
+    image: twooceans.jpg
+
+Wine(relax):
+    name: 2011 Relax Reisling
+    color: white
+    location: Mosel, Germany
+    world: new
+    style: 1
+    price: 10
+    alc: 9.5
+    oaked: No
+    description: With forward fruit and floral aromas of apples and peaches with just a hint of citrus, the wine's natural acidity gives it a perfect balance that is refreshingly crisp and leaves your mouth watering. Relax Riesling is delicious on its own, and it pairs perfectly with a variety of foods, from grilled seafood and poultry to spicy oriental dishes and fresh salads.
+    image: relax.jpg
+
+Wine(toastedHead):
+    name: 2010 Toasted Head Chardonnay
+    color: white
+    location: California
+    world: new
+    style: 3
+    price: 8
+    alc: 13.5
+    oaked: Yes
+    description: The nose offers ripe pineapple and peach aromas with toasted graham cracker. The bright straw color prepares the palate for the rich tropical fruit and luscious stone fruit with a viscous mouth feel accented by toasted coconut, vanilla and butterscotch. The creamy finish lingers with hints of buttered toast and lemon zest. This wine will pair well with creamy Italian pasta dishes, roasted chicken or fish, and fresh summer corn.
+    image: toastedhead.png
+
+Wine(sidewisePinotNoir):
+    name: 2009 Sidewise Pinot Noir
+    color: red
+    location: Vin de Pays D'Oc, France
+    world: old
+    style: 3
+    price: 8
+    alc: 12.5
+    oaked: No
+    description: Deep ruby color with purple highlights. Well balanced between acidity and fruit. A bit spicy and earthy. Great with grilled burgers, salmon on the grill, or grilled chicken.
+    image: sidewise.jpg
+
+Wine(closMerlot):
+    name: 2007 Clos du Bois Merlot
+    color: red
+    location: North Coast, California
+    world: new
+    style: 2
+    price: 15
+    alc: 14.5
+    oaked: No
+    description: This inky, ruby red Merlot has developed aromas of toasted oak, blackberry and baking spice that segues into a round, full-bodied wine with great concentration, strong tannins and black cherry flavors. This Merlot is a perfect match for meaty dishes made of beef or lamb or more subtle pairings built around earthy flavors, such as mushrooms and herbs.
+    image: clos_merlot.png
+
+Wine(closCab):
+    name: 2008 Clos du Bois Cabernet Sauvignon
+    color: red
+    location: North Coast, California
+    world: new
+    style: 4
+    price: 15
+    alc: 13.5
+    oaked: Yes
+    description: Full-bodied and forward on the palate, this wine offers well-integrated flavors of black fruits, plum, mocha and clove spice before a long, mouth-filling finish that wraps up with cassis and toast. This elegant, structured Cabernet calls for savory fare such as pasta Bolognese, lamb, sliders and pizza.
+    image: clos_cab.jpg
+
+# Week 3 Wines
+
+Wine(domaine):
+    name: 2009 Domane Wachau Riesling Federspiel Terrassen
+    color: white
+    location: Austria
+    world: old
+    style: 1
+    price: 16
+    alc: 12.5
+    oaked: No
+    description: Deep yellow-green colour. Intense peach and passion fruit with lime zest on the nose. Juicy vineyard peach and a touch of lichee are pierced by a racy acid and dry structure. Finishes fruity and long.
+    image: domaine.jpg
+
+Wine(zindReisling):
+    name: 2007 Zind-Humbrecht Reisling
+    color: white
+    location: Alsace, France
+    world: old
+    style: 3
+    price: 24
+    alc: 12.5
+    oaked: Yes
+    description: Still on its fine lees, but already showing classic vibrant Riesling aromas, full of fresh flowers, wet stones and a hint of minerals. The palate is rich, full, feels completely dry and finished on a refreshing acidity.
+    image: zind_reisling.jpg
+
+Wine(urbansKabinett):
+    name: 2011 St. Urbans-Hof Reisling Kabinett
+    color: white
+    location: Ockfener Bockstein, Mosel, Germany
+    world: old
+    style: 2
+    price: 15
+    alc: 9.5
+    oaked: No
+    description: Elderflower, lilac, violet, and rose are the floral notes attributed to these wines along with the aforementioned smoky minerality.
+    image: urbans_kabinett.jpg
+
+Wine(urbansKabinett):
+    name: 2011 St. Urbans-Hof Ockfener Bockstein Spatlese (Reisling)
+    color: white
+    location: Piesporter Goldtropfchen, Mosel, Germany
+    world: old
+    style: 2
+    price: 23
+    alc: 9
+    oaked: No
+    description: This wine was especially late harvested. Elderflower, lilac, violet, and rose are the floral notes attributed to these wines along with the aforementioned smoky minerality.
+    image: urbans_spatlese.jpg
+
+Wine(drfrankReisling):
+    name: 2010 Dr. Frank Dry Reisling
+    color: white
+    location: Finger Lakes, NY
+    world: new
+    style: 1
+    price: 12
+    alc: 14
+    oaked: No
+    description: This Riesling has a classic pale straw color with a crisp green hue. The nose shows typical Keuka Lake minerality and fresh lemon citrus fruit with an intriguing blossom aroma. The palate shows wonderful tight acid that balances out the fruity residual sugar enhancing the floral and lemon flavors. The palate also displays the slatey mineral characteristics that typify Dr. Frank's Rieslings. Serve with all seafood and crustaceans.
+    image: drfrank_reisling.jpg
+
+Wine(chateauReisling):
+    name: 2010 Chateau Ste. Michelle Reisling
+    color: white
+    location: Columbia Valley, WA
+    world: new
+    style: 1
+    price: 9
+    alc: 12
+    oaked: No
+    description: The Chateau Ste. Michelle Dry Riesling is a dry, crisp, refreshing style of Riesling with beautiful fruit flavors, crisp acidity and an elegant finish. It exudes beautiful white peach and floral aromas with a clean finish. This is an incredibly versatile food wine and a favorite with oysters.
+    image: cv_dryriesling.gif
+
+# Week 5 Wines
+
+Wine(mondaviFume):
+    name: 2009 Robert Mondavi Fume Blanc Sauvignon Blanc
+    color: white
+    location: Napa Valley, CA
+    world: new
+    style: 1
+    price: 19
+    alc: 14.5
+    oaked: No
+    description: Fresh aromas of lime, guava and lemon verbena anticipate crisp, mouthwatering flavors of ripe honeydew, lemongrass and honeysuckle with subtle spice notes. The ample mouthfeel and creamy texture is enlivened by zesty acidity and lingering citrus flavors.
+    image: mondavi_fume.jpg
+
+Wine(willamettePinotNoir):
+    name: 2009 Willamette Valley Vineyards Whole Cluster Pinot Noir
+    color: red
+    location: Willamette Valley, Oregon
+    world: new
+    style: 1
+    price: 20
+    alc: 12.5
+    oaked: No
+    description: As refreshing as liquid fruit salad in a glass, this wine opens with explosive aromas of wild strawberry, raspberry, black cherry, and a hint of smoke and anise. Flavors mirror the aromas and are complemented by balanced, soft tannins and ripe acidity. Juicy flavors lead to a juicy pomegranite finish.
+    image: willamette_pinot.jpg
+
+Wine(pindarMerlot):
+    name: Pindar Pythagoras Blend (NV)
+    color: red
+    location: North Fork of Long Island, NY
+    world: new
+    style: 1
+    price: 10
+    alc: 12.5
+    oaked: No
+    description: A very special red wine crafted geometrically by our master winemaker for the expressed use of our proprietor to celebrate our 20th anniversary. A non vintage -rich blend of Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot and Malbec. Dry, complex, a subtle fruity bouquet dominates the palate.
+    image: pindar_pythagoras.jpg
+
+
