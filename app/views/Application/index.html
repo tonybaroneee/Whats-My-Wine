@@ -1,4 +1,93 @@
 #{extends 'main.html' /}
-#{set title:'Home' /}
+#{set title:'What\'s My Wine | Home' /}
 
-#{welcome /}
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">View All <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Red Wines</a></li>
+              <li><a href="#">White Wines</a></li>
+              <li><a href="#">Dessert Wines</a></li>
+              <li><a href="#">Sparkling Wines</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron masthead">
+  <div class="container">
+    <h1>What's My Wine?</h1>
+    <p>Get spot-on wine recommendations with just a few clicks.</p>
+    <p><button id="getstarted" class="btn btn-primary btn-large">Get Started!</button></p>
+    <ul class="masthead-links">
+    </ul>
+  </div>
+</div>
+
+<div id="search-start" class="container">
+  <div class="marketing">
+
+    <h1>#1. Choose your price.</h1>
+    <p class="category-caption">How much are you willing to pay?</p>
+
+    <div class="row-fluid">
+      <div class="btn-group" data-toggle="buttons-radio">
+        <div class="span4">
+          <button id="price1" type="button" class="btn btn-success">$</button>
+          <h2 id="price1-text">$5 - $9</h2>
+        </div>
+        <div class="span4">
+          <button id="price2" type="button" class="btn btn-success">$$</button>
+          <h2 id="price2-text">$10 - $15</h2>
+        </div>
+        <div class="span4">
+          <button id="price3" type="button" class="btn btn-success">$$$</button>
+          <h2 id="price3-text">$16 - $20.</h2>
+        </div>
+      </div>
+    </div>
+    <p class="category-error text-error hide">Please select a price range.</p>
+
+    <hr class="soften">
+
+    <h1>#2. Choose your price.</h1>
+    <p class="category-caption">How much are you willing to pay?</p>
+
+    <div class="row-fluid">
+      <div class="btn-group" data-toggle="buttons-radio">
+        <div class="span3">
+          <button id="test1" type="button" class="btn btn-success">$</button>
+          <h2 id="test1-text">Blah blah 1</h2>
+        </div>
+        <div class="span3">
+          <button id="test2" type="button" class="btn btn-success">$$</button>
+          <h2 id="test2-text">Blah blah 2</h2>
+        </div>
+        <div class="span3">
+          <button id="test3" type="button" class="btn btn-success">$$$</button>
+          <h2 id="test3-text">Blah blah 3</h2>
+        </div>
+        <div class="span3">
+          <button id="test4" type="button" class="btn btn-success">$$$</button>
+          <h2 id="test4-text">Blah blah 4</h2>
+        </div>
+      </div>
+    </div>
+    <p class="category-error text-error hide">Please select a price range.</p>
+
+  </div>
+
+</div>
