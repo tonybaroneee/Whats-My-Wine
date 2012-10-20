@@ -99,7 +99,7 @@ section > ul li {
 /* Faded out hr */
 hr.soften {
   height: 1px;
-  margin: 70px 0;
+  margin: 30px 0;
   background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
   background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
   background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
@@ -304,13 +304,14 @@ hr.soften {
 }
 .marketing .category-caption, 
 .marketing .category-error {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   font-size: 20px;
   font-weight: 300;
   line-height: 25px;
 }
 .marketing .category-caption {
   color: #999;
+  white-space: normal;
 }
 .marketing .category-error {
   margin: 15px 0 0 0;
@@ -320,9 +321,16 @@ hr.soften {
   margin: 0 auto 30px;
 }
 .marketing .row-fluid button {
-  font-size: 40px;
 	width: 120px;
   height: 120px;
+}
+.marketing .row-fluid button,
+.marketing .row-fluid button i {
+  font-size: 40px;
+}
+
+.marketing .row-fluid .style-btn {
+  font-size: 28px;
 }
 
 
@@ -1049,13 +1057,30 @@ form.bs-docs-example {
 h2.chosen {
   font-weight: bold;
 }
+#search-start button.active {
+  -webkit-box-shadow: 0 0 25px rgba(82, 168, 236, .5);
+          box-shadow: 0 0 25px rgba(82, 168, 236, .5);
+}
 #submitsearch {
   margin-top: 0;
 }
+#wine-list-header-container {
+  position: relative;
+}
+#back-to-search {
+  position: absolute;
+  right: -30px;
+  bottom: 28px;
+}
+#wine-list .bottle-img-container {
+  float: left;
+  width: 100px;
+  height: 200px;
+  text-align: center;
+  margin: 0 15px 15px 0;
+}
 #wine-list .bottle-img {
   height: 200px;
-  float: left;
-  margin-right: 25px;
 }
 #wine-list .results-header {
   padding: 20px 0;
@@ -1067,8 +1092,14 @@ h2.chosen {
 }
 #wine-list .wine-price {
   position: absolute;
-  right: 10px;
+  right: 5px;
   top: -8px;
+}
+#wine-list .wine-alc {
+  position: absolute;
+  right: 5px;
+  top: 70px;
+  color: #666;
 }
 #wine-list .wine-title {
   margin-right: 81px;
@@ -1076,3 +1107,15 @@ h2.chosen {
 #wine-list .wine-location {
   color: #555;
 }
+#wine-list .wine-type {
+  color: #555;
+  text-transform: capitalize;
+}
+#wine-list .wine-row-line {
+  margin: 0 0 10px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, .3), rgba(0, 0, 0, .05));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, .3), rgba(0, 0, 0, .05));
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, .3), rgba(0, 0, 0, .05));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, .3), rgba(0, 0, 0, .05));
+}
+

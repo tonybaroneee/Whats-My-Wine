@@ -115,7 +115,7 @@ Wine(sidewisePinotNoir):
     type: red
     location: Vin de Pays D'Oc, France
     world: old
-    style: 3
+    style: 2
     price: 8
     alc: 12.5
     oaked: No
@@ -139,7 +139,7 @@ Wine(closCab):
     type: red
     location: North Coast, CA
     world: new
-    style: 4
+    style: 3
     price: 15
     alc: 13.5
     oaked: Yes
@@ -165,7 +165,7 @@ Wine(zindReisling):
     type: white
     location: Alsace, France
     world: old
-    style: 3
+    style: 2
     price: 24
     alc: 12.5
     oaked: Yes
@@ -275,7 +275,7 @@ Wine(beringerCabernet):
     type: red
     location: Napa Valley, CA
     world: new
-    style: 4
+    style: 3
     price: 23
     alc: 14.3
     oaked: Yes
@@ -287,7 +287,7 @@ Wine(ravenswoodZin):
     type: red
     location: Lodi, CA
     world: new
-    style: 4
+    style: 3
     price: 13
     alc: 14.5
     oaked: Yes
@@ -296,7 +296,7 @@ Wine(ravenswoodZin):
 
 Wine(heronhillVidal):
     name: 2008 Heron Hill Late Harvest Vidal Blanc (375ml)
-    type: dessert
+    type: dessert (Very sweet)
     location: Finger Lakes, NY
     world: new
     style: 2
@@ -371,7 +371,7 @@ Wine(rosemountShiraz):
     type: red
     location: South Eastern, Australia
     world: new
-    style: 4
+    style: 3
     price: 8
     alc: 14.5
     oaked: Yes
@@ -419,7 +419,7 @@ Wine(nederbergPinotage):
     type: red
     location: Western Cape, South Africa
     world: new
-    style: 4
+    style: 3
     price: 9
     alc: 14
     oaked: Yes
@@ -452,7 +452,7 @@ Wine(trumpeterMalbec):
 
 Wine(eisweinBlend):
     name: 2009 Schmitt-Sohne Eiswein Blend (500ml)
-    type: dessert
+    type: dessert (Very sweet)
     location: Pfalz, Germany
     world: old
     style: 2

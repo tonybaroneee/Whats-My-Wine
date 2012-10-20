@@ -8,5 +8,4 @@ Red Style Guide
 
 1. Light & Fruity: Red wines that are more fruit-forward and lighter in tannin and body.
 2. Smooth & Supple: Medium bodied reds that go down easy, with smooth tannins and supple fruit.
-3. Earthy & Spicy: Wines where earthy and/or spicy dominate the flavors – typically medium to full body.
-4. Big & Bold: Full bodied wines that have concentrated fruit and are higher in alcohol and/or tannins. Some need age.
+3. Big & Bold: Full bodied wines that have concentrated fruit and are higher in alcohol and/or tannins. Possibly earthy and may contain hints of spices.

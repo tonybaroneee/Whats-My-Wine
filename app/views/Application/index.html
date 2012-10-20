@@ -18,7 +18,6 @@
               <li><a href="#">Red Wines</a></li>
               <li><a href="#">White Wines</a></li>
               <li><a href="#">Dessert Wines</a></li>
-              <li><a href="#">Sparkling Wines</a></li>
             </ul>
           </li>
         </ul>
@@ -46,22 +45,22 @@
     <div class="row-fluid">
       <div class="btn-group" data-toggle="buttons-radio">
         <div class="span3">
-          <button type="button" class="btn btn-success price-btn active" value="">?</button>
+          <button type="button" class="btn btn-success price-btn active" value="" rel="tooltip" title="Select this option">?</button>
           <h2 class="price-text chosen">Anything</h2>
           <p class="category-caption">I don't care about the price.</p>
         </div>
         <div class="span3">
-          <button type="button" class="btn price-btn" value="low">$</button>
+          <button type="button" class="btn price-btn" value="low" rel="tooltip" title="Select this option">$</button>
           <h2 class="price-text">$5 - $10</h2>
           <p class="category-caption">Inexpensive</p>
         </div>
         <div class="span3">
-          <button type="button" class="btn price-btn" value="mid">$$</button>
+          <button type="button" class="btn price-btn" value="mid" rel="tooltip" title="Select this option">$$</button>
           <h2 class="price-text">$11 - $17</h2>
           <p class="category-caption">Mid-Range</p>
         </div>
         <div class="span3">
-          <button type="button" class="btn price-btn" value="high">$$$</button>
+          <button type="button" class="btn price-btn" value="high" rel="tooltip" title="Select this option">$$$</button>
           <h2 class="price-text">$18 +</h2>
           <p class="category-caption">Gettin' Fancy!</p>
         </div>
@@ -72,25 +71,29 @@
     <hr class="soften">
 
     <h1>#2. Choose your style.</h1>
-    <p class="category-caption">Describe your taste buds.</p>
+    <p class="category-caption">Describe what your taste buds are craving.</p>
 
     <div class="row-fluid">
       <div class="btn-group" data-toggle="buttons-radio">
         <div class="span3">
-          <button id="test1" type="button" class="btn btn-success">$</button>
-          <h2 id="test1-text">Blah blah 1</h2>
+          <button type="button" class="btn btn-success style-btn active" value="" rel="tooltip" title="Select this option">?</button>
+          <h2 class="style-text chosen">Anything</h2>
+          <p class="category-caption">I don't care about the style.</p>
         </div>
         <div class="span3">
-          <button id="test2" type="button" class="btn btn-success">$$</button>
-          <h2 id="test2-text">Blah blah 2</h2>
+          <button type="button" class="btn style-btn" value="1" rel="tooltip" title="Select this option">"Ahh"</button>
+          <h2 class="style-text">Lightweight</h2>
+          <p class="category-caption">Crisp, refreshing taste with high acidity.</p>
         </div>
         <div class="span3">
-          <button id="test3" type="button" class="btn btn-success">$$$</button>
-          <h2 id="test3-text">Blah blah 3</h2>
+          <button type="button" class="btn style-btn" value="2" rel="tooltip" title="Select this option">"Mmm"</button>
+          <h2 class="style-text">Fruity &amp; Smooth</h2>
+          <p class="category-caption">Lots of juicy fruit that goes down easy.</p>
         </div>
         <div class="span3">
-          <button id="test4" type="button" class="btn btn-success">$$$</button>
-          <h2 id="test4-text">Blah blah 4</h2>
+          <button type="button" class="btn style-btn" value="3" rel="tooltip" title="Select this option">"Pow!"</button>
+          <h2 class="style-text">Big &amp; Bold</h2>
+          <p class="category-caption">Concentrated fruit with hints of spices and vanilla/nutty flavor.</p>
         </div>
       </div>
     </div>
@@ -101,7 +104,6 @@
     <button id="submitsearch" class="btn btn-primary btn-large bigbutton">All finished. Show me the wines!</button>
 
   </div>
-
 </div>
 
 <div id="wine-list" class="container hide"></div>
