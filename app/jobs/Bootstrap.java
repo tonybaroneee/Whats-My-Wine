@@ -16,10 +16,8 @@ public class Bootstrap extends Job {
     }
 
     private void setupDB() {
-    	
-    	Fixtures.load("all-wines.yml");
-
-        
+        Fixtures.delete();
+        Fixtures.loadModels("all-wines.yml");
     }
 
 }

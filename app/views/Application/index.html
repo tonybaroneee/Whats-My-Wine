@@ -45,19 +45,24 @@
 
     <div class="row-fluid">
       <div class="btn-group" data-toggle="buttons-radio">
-        <div class="span4">
-          <button id="price1" type="button" class="btn btn-success">$</button>
-          <h2 id="price1-text">$5 - $10</h2>
+        <div class="span3">
+          <button type="button" class="btn btn-success price-btn active" value="">?</button>
+          <h2 class="price-text chosen">Anything</h2>
+          <p class="category-caption">I don't care about the price.</p>
+        </div>
+        <div class="span3">
+          <button type="button" class="btn price-btn" value="low">$</button>
+          <h2 class="price-text">$5 - $10</h2>
           <p class="category-caption">Inexpensive</p>
         </div>
-        <div class="span4">
-          <button id="price2" type="button" class="btn btn-success">$$</button>
-          <h2 id="price2-text">$11 - $17</h2>
+        <div class="span3">
+          <button type="button" class="btn price-btn" value="mid">$$</button>
+          <h2 class="price-text">$11 - $17</h2>
           <p class="category-caption">Mid-Range</p>
         </div>
-        <div class="span4">
-          <button id="price3" type="button" class="btn btn-success">$$$</button>
-          <h2 id="price3-text">$18 +</h2>
+        <div class="span3">
+          <button type="button" class="btn price-btn" value="high">$$$</button>
+          <h2 class="price-text">$18 +</h2>
           <p class="category-caption">Gettin' Fancy!</p>
         </div>
       </div>
@@ -93,8 +98,10 @@
 
     <hr class="soften">
 
-    <button id="submitsearch" class="btn btn-primary btn-large">All finished. Show me the wines!</button>
+    <button id="submitsearch" class="btn btn-primary btn-large bigbutton">All finished. Show me the wines!</button>
 
   </div>
 
 </div>
+
+<div id="wine-list" class="container hide"></div>

@@ -2,7 +2,7 @@
 
 Wine(kingEstate):
     name: 2011 King Estate Pinot Gris
-    color: white
+    type: white
     location: Willamette Valley, Oregon
     world: new
     style: 2
@@ -14,7 +14,7 @@ Wine(kingEstate):
 
 Wine(hugelGris):
     name: 2007 Hugel Pinot Gris
-    color: white
+    type: white
     location: Alsace, France
     world: old
     style: 1
@@ -26,7 +26,7 @@ Wine(hugelGris):
 
 Wine(lamorChardUnoaked):
     name: 2010 Lamoreaux Landing Unoaked Chardonnay
-    color: white
+    type: white
     location: Finger Lakes, NY
     world: new
     style: 2
@@ -37,8 +37,8 @@ Wine(lamorChardUnoaked):
     image: lamoreaux.jpg
 
 Wine(lamorChardOaked):
-    name: 2008 Lamoreaux Landing Reserve (Chardonnay)
-    color: white
+    name: 2008 Lamoreaux Landing Reserve Chardonnay
+    type: white
     location: Finger Lakes, NY
     world: new
     style: 3
@@ -50,7 +50,7 @@ Wine(lamorChardOaked):
 
 Wine(ruffinoChianti):
     name: 2008 Ruffino Ducale Chianti
-    color: red
+    type: red
     location: Tuscany, Italy
     world: old
     style: 2
@@ -62,7 +62,7 @@ Wine(ruffinoChianti):
 
 Wine(ferrariCarano):
     name: 2010 Ferrari Carano Siena
-    color: red
+    type: red
     location: Sonoma County, CA
     world: new
     style: 2
@@ -76,7 +76,7 @@ Wine(ferrariCarano):
 
 Wine(twoOceans):
     name: 2011 Two Oceans Sauvignon Blanc
-    color: white
+    type: white
     location: Western Cape, South Africa
     world: new
     style: 2
@@ -88,7 +88,7 @@ Wine(twoOceans):
 
 Wine(relax):
     name: 2011 Relax Reisling
-    color: white
+    type: white
     location: Mosel, Germany
     world: new
     style: 1
@@ -100,7 +100,7 @@ Wine(relax):
 
 Wine(toastedHead):
     name: 2010 Toasted Head Chardonnay
-    color: white
+    type: white
     location: California
     world: new
     style: 3
@@ -112,7 +112,7 @@ Wine(toastedHead):
 
 Wine(sidewisePinotNoir):
     name: 2009 Sidewise Pinot Noir
-    color: red
+    type: red
     location: Vin de Pays D'Oc, France
     world: old
     style: 3
@@ -124,8 +124,8 @@ Wine(sidewisePinotNoir):
 
 Wine(closMerlot):
     name: 2007 Clos du Bois Merlot
-    color: red
-    location: North Coast, California
+    type: red
+    location: North Coast, CA
     world: new
     style: 2
     price: 15
@@ -136,8 +136,8 @@ Wine(closMerlot):
 
 Wine(closCab):
     name: 2008 Clos du Bois Cabernet Sauvignon
-    color: red
-    location: North Coast, California
+    type: red
+    location: North Coast, CA
     world: new
     style: 4
     price: 15
@@ -150,7 +150,7 @@ Wine(closCab):
 
 Wine(domaine):
     name: 2009 Domane Wachau Riesling Federspiel Terrassen
-    color: white
+    type: white
     location: Austria
     world: old
     style: 1
@@ -162,7 +162,7 @@ Wine(domaine):
 
 Wine(zindReisling):
     name: 2007 Zind-Humbrecht Reisling
-    color: white
+    type: white
     location: Alsace, France
     world: old
     style: 3
@@ -174,7 +174,7 @@ Wine(zindReisling):
 
 Wine(urbansKabinett):
     name: 2011 St. Urbans-Hof Reisling Kabinett
-    color: white
+    type: white
     location: Ockfener Bockstein, Mosel, Germany
     world: old
     style: 2
@@ -186,7 +186,7 @@ Wine(urbansKabinett):
 
 Wine(urbansKabinett):
     name: 2011 St. Urbans-Hof Ockfener Bockstein Spatlese (Reisling)
-    color: white
+    type: white
     location: Piesporter Goldtropfchen, Mosel, Germany
     world: old
     style: 2
@@ -198,7 +198,7 @@ Wine(urbansKabinett):
 
 Wine(drfrankReisling):
     name: 2010 Dr. Frank Dry Reisling
-    color: white
+    type: white
     location: Finger Lakes, NY
     world: new
     style: 1
@@ -210,7 +210,7 @@ Wine(drfrankReisling):
 
 Wine(chateauReisling):
     name: 2010 Chateau Ste. Michelle Reisling
-    color: white
+    type: white
     location: Columbia Valley, WA
     world: new
     style: 1
@@ -224,7 +224,7 @@ Wine(chateauReisling):
 
 Wine(mondaviFume):
     name: 2009 Robert Mondavi Fume Blanc Sauvignon Blanc
-    color: white
+    type: white
     location: Napa Valley, CA
     world: new
     style: 1
@@ -236,7 +236,7 @@ Wine(mondaviFume):
 
 Wine(willamettePinotNoir):
     name: 2009 Willamette Valley Vineyards Whole Cluster Pinot Noir
-    color: red
+    type: red
     location: Willamette Valley, Oregon
     world: new
     style: 1
@@ -247,15 +247,217 @@ Wine(willamettePinotNoir):
     image: willamette_pinot.jpg
 
 Wine(pindarMerlot):
-    name: Pindar Pythagoras Blend (NV)
-    color: red
+    name: Pindar Pythagoras Blend (Non-Vintage)
+    type: red
     location: North Fork of Long Island, NY
     world: new
     style: 1
     price: 10
     alc: 12.5
-    oaked: No
+    oaked: 
     description: A very special red wine crafted geometrically by our master winemaker for the expressed use of our proprietor to celebrate our 20th anniversary. A non vintage -rich blend of Cabernet Sauvignon, Cabernet Franc, Merlot, Petit Verdot and Malbec. Dry, complex, a subtle fruity bouquet dominates the palate.
     image: pindar_pythagoras.jpg
 
+Wine(hogueMerlot):
+    name: 2007 Hogue Genesis Merlot
+    type: red
+    location: Columbia Valley, WA
+    world: new
+    style: 2
+    price: 8
+    alc: 13.9
+    oaked: Yes
+    description: Eastern Washington has gained a reputation as an exceptional Merlot-producing region, and this spicy, silky wine is a fine example of the quality of Merlot the region is capable of producing. The Genesis Merlot offers aromas and flavors of wild blueberry and juicy plum with a spicy cinnamon accent. Clean and supple, the wine has a measure of acidity to balance the plush fruit. Pair it with flank steak, veal parmesan or ratatouille.
+    image: hogue_merlot.jpg
 
+Wine(beringerCabernet):
+    name: 2009 Beringer Cabernet Sauvignon
+    type: red
+    location: Napa Valley, CA
+    world: new
+    style: 4
+    price: 23
+    alc: 14.3
+    oaked: Yes
+    description: Aromas of blackberry, cassis and sarsaparilla are complemented by spice notes. A note of sweet mint leads into a ripe fruit core full of blackberry and currant flavors. A pleasing finish accents the full body and smooth tannins.
+    image: beringer_cab.jpg
+
+Wine(ravenswoodZin):
+    name: 2009 Ravenswood Old Vine Zinfandel
+    type: red
+    location: Lodi, CA
+    world: new
+    style: 4
+    price: 13
+    alc: 14.5
+    oaked: Yes
+    description: A gutsy wine with fruit sourced from notable vineyards throughout the valley, this Old Vine Zinfandel is expressive with notes of warm spice and vanilla. Powerful, full-bodied raspberry and blackberry flavors with structured tannins will allow this wine to age, but vibrant fruit makes it perfect for drinking right now.
+    image: ravenswood_zin.png
+
+Wine(heronhillVidal):
+    name: 2008 Heron Hill Late Harvest Vidal Blanc (375ml)
+    type: dessert
+    location: Finger Lakes, NY
+    world: new
+    style: 2
+    price: 15
+    alc: 10.5
+    oaked: No
+    description: Pale straw green color. Aromas of baked and honeyed dried citrus and stone fruits have a subtle minerality and follow thorugh on a silky entry to a fruity sweet medium body with a breezy, lime peel and chalk accented fade.Like most dessert wines, this wine is meant to be enjoyed on its own after a meal or paired with desserts like stone fruit tarts, flan, bread pudding or goat cheese with walnuts and a honey drizzle.
+    image: heron_hill_vidal.png
+
+Wine(catsPee):
+    name: 2008 Cat's Pee on a Gooseberry Bush Sauvignon Blanc
+    type: white
+    location: East Coast, New Zealand
+    world: new
+    style: 2
+    price: 13
+    alc: 12.5
+    oaked: No
+    description: The grapes for this wine were carefully selected to capture the famous character and essence of New Zealand Sauvignon Blanc. Warm summer days and cool evenings have produced a wine with strong gooseberry aromas and gentle hints of cat. Serve this intensely flavoured dry white wine as an aperitif or with salad, seafood and pasta dishes.
+    image: catspee.jpg
+
+Wine(crawfordChard):
+    name: 2009 Kim Crawford Unoaked Chardonnay
+    type: white
+    location: Marlborough, New Zealand
+    world: new
+    style: 2
+    price: 15
+    alc: 13.5
+    oaked: No
+    description: Straw colored with a rich butterscotch nose with hints of ripe stonefruit and citrus. An appropriate and full-bodied Chardonnay that shows great length and persistence. Ripe stonefruit and malolactic characters show through well in a style uncluttered by oak. Match with seafood, white meats and 'fusion' food.
+    image: crawford_chard.jpg
+
+Wine(yellowtailChard):
+    name: Yellow Tail Chardonnay (Non-Vintage)
+    type: white
+    location: South Eastern, Australia
+    world: new
+    style: 3
+    price: 6
+    alc: 13
+    oaked: Yes
+    description: The wine shows ripe characters of peach and rockmelon, which are striking on the nose. This leads into a fresh and floral front palate where there is an up-front sweetness, adding to the wines' lengthy oak richness. . The sweet and savoury palate lends itself to both pasta or meat dishes, or you could throw some shrimp on the barbie perhaps.
+    image: yt_chard.gif
+
+Wine(oysterPinot):
+    name: 2011 Oyster Bay Pinot Noir
+    type: red
+    location: Marlborough, New Zealand
+    world: new
+    style: 1
+    price: 15
+    alc: 13.5
+    oaked: No
+    description: Oyster Bay Marlborough Pinot Noir is elegant cool climate pinot noir at its best. Fragrant, soft and flavorful with aromas of ripe cherries and sweet fruit tannins that provide structure and length.
+    image: oyster_pinot.jpg
+
+Wine(oxfordGSM):
+    name: 2008 Oxford Landing GSM (Grencahe, Shiraz, Mourvedre)
+    type: red
+    location: South Australia, Australia
+    world: new
+    style: 2
+    price: 8
+    alc: 14.5
+    oaked: No
+    description: Bright plum with magenta hues, the 2008 Oxford Landing GSM has lifted forest berry fruits with hints of liquorice and spice. Plum and dark fruit from the Shiraz are complemented by the raspberries, red cherries and spice from the Grenache, creating a rich compote of flavors on the palate. These flavors are balanced on the palate by the chalky Mourvedre tannins that provide a slightly savory finish that lingers long after the wine is consumed.
+    image: oxford_gsm.jpg
+
+Wine(rosemountShiraz):
+    name: 2010 Rosemount Shiraz
+    type: red
+    location: South Eastern, Australia
+    world: new
+    style: 4
+    price: 8
+    alc: 14.5
+    oaked: Yes
+    description: Smooth and velvety, with a fresh, lively feel to the blueberry and plum flavors. A hint of nutmeg and oak marks the finish.
+    image: rosemount_shiraz.jpg
+
+Wine(indabaChenin):
+    name: 2011 Indaba Chenin Blanc
+    type: white
+    location: Western Cape, South Africa
+    world: new
+    style: 2
+    price: 7
+    alc: 13.5
+    oaked: No
+    description: Chenin Blanc is South Africa's most widely planted varietal and the Cape's signature white. This fresh, vibrant version offers luscious flavors of tropical fruit, melon and honeyed pear, backed by bright citrus flavors. Lively peppery notes and an underlying mineral character shine through on the finish. Pairs best with salads, seafood, light pasta dishes, and light cheeses.
+    image: indaba_chenin_blanc.jpg 
+
+Wine(santaritaSauv):
+    name: 2011 Santa Rita 120 Sauvignon Blanc
+    type: white
+    location: Valle Central, Chile
+    world: new
+    style: 2
+    price: 8
+    alc: 13.5
+    oaked: No
+    description: This wine has a green colour with yellow notes of medium intensity. Intense fruity aroma with a citric dominion and herbal background. On the palate it shows great concentration, elegant fresh acidity and nice persistency.
+    image: santarita.jpg 
+
+Wine(alamosTorr):
+    name: 2011 Alamos Torrontes
+    type: white
+    location: Salta, Argentina
+    world: new
+    style: 1
+    price: 9
+    alc: 13.5
+    oaked: No
+    description: The 2011 Alamos Torrontes has a floral bouquet with expressive aromas of orange and jasmine blossoms, balanced by citrus and peach flavors. This bright, refreshing white wine has well-structured acidity and a crisp finish. Enjoy as an aperitif or with spicy food, traditional seafood or tangy cheeses.
+    image: alamos.jpg
+
+Wine(nederbergPinotage):
+    name: 2010 Nederberg Pinotage
+    type: red
+    location: Western Cape, South Africa
+    world: new
+    style: 4
+    price: 9
+    alc: 14
+    oaked: Yes
+    description: An abundance of plums and prunes with a hint of banana and slight oak spices in the background. A full mouthfeel with rich fruit flavours, soft tannins and a lingering aftertaste. Excellent served with pasta, pizza, roast leg of lamb, bobotie and even chocolate.
+    image: nederberg.jpg
+
+Wine(casilleroDiablo):
+    name: 2010 Concha y Toro "Casillero del Diablo" Carmenere
+    type: red
+    location: Rapel Valley, Chile
+    world: new
+    style: 2
+    price: 9
+    alc: 13.5
+    oaked: Yes
+    description: The color is a dark and deep crimson red, while the bouquet displays notes of dark plums and chocolate with hints of coffee and toasty American oak. On th the palate are flavors of dark plums and spice, generously framed by toasty American oak with a soft and well structured mouthfilling texture. Enjoy Casillero del Diablo Carmenere with meats, ripe cheese and pasta.
+    image: devil.jpg
+
+Wine(trumpeterMalbec):
+    name: 2011 Trumpeter Malbec
+    type: red
+    location: Mendoza, Argentina
+    world: new
+    style: 2
+    price: 8
+    alc: 13.5
+    oaked: Yes
+    description: Inky and dense with attractive berry aromas and a touch of cinnamon and sweet spice. A fully, fruity wine, with excellent body, intense tannins, flavors of cherry, blackberry, boysenberry and plum intermingled with hints of cardamom and pepper, and a long, full finish.
+    image: trumpeter.jpg
+
+Wine(eisweinBlend):
+    name: 2009 Schmitt-Sohne Eiswein Blend (500ml)
+    type: dessert
+    location: Pfalz, Germany
+    world: old
+    style: 2
+    price: 20
+    alc: 9
+    oaked: No
+    description: Literal translation? "Ice wine." The harvest of these wines is very rare as it only occurs during the first hard frost that freezes the last of the grapes that remain on the vine. The grapes are then picked and pressed frozen so very little water gets in to the press and only a small amount of highly concentrated juice is extracted. The result is an extraordinary bond between sweetness and acidity.
+    image: eiswein.png

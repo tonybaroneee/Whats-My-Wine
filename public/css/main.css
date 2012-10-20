@@ -11,7 +11,28 @@
   Special styles for presenting Bootstrap's documentation and examples
 */
 
-
+/* Google-like scrollbar
+-------------------------------------------------- */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #F8F8F8;
+}
+::-webkit-scrollbar-track:hover {
+    -webkit-box-shadow: inset 2px 0px 8px rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb {
+    background: #BBB;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+::-webkit-scrollbar-thumb:active {
+    background: #777;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
+}
 
 /* Body and structure
 -------------------------------------------------- */
@@ -302,10 +323,6 @@ hr.soften {
   font-size: 40px;
 	width: 120px;
   height: 120px;
-}
-.marketing #submitsearch {
-  font-size: 26px;
-  padding: 15px 30px;
 }
 
 
@@ -1022,18 +1039,40 @@ form.bs-docs-example {
   }
 }
 
+/* Custom styles */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.bigbutton {
+  font-size: 26px;
+  padding: 15px 30px;
+  margin: 50px 0;
+}
+h2.chosen {
+  font-weight: bold;
+}
+#submitsearch {
+  margin-top: 0;
+}
+#wine-list .bottle-img {
+  height: 200px;
+  float: left;
+  margin-right: 25px;
+}
+#wine-list .results-header {
+  padding: 20px 0;
+  color: #5A5A5A;
+  font-weight: 200;
+}
+#wine-list .wine-info-box {
+  position: relative;
+}
+#wine-list .wine-price {
+  position: absolute;
+  right: 10px;
+  top: -8px;
+}
+#wine-list .wine-title {
+  margin-right: 81px;
+}
+#wine-list .wine-location {
+  color: #555;
+}
