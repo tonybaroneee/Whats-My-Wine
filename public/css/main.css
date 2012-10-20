@@ -318,7 +318,8 @@ hr.soften {
   font-size: 40px;
 }
 
-.marketing .row-fluid .style-btn {
+.marketing .row-fluid .style-btn,
+.marketing .row-fluid .color-btn {
   font-size: 28px;
 }
 
