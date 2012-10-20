@@ -14,11 +14,13 @@ public class Application extends Controller {
     public static void getWineList() {
         String price = request.params.get("price");
         String style = request.params.get("style");
+        String color = request.params.get("color");
 
         List<Wine> wineList;
         StringBuilder query = new StringBuilder("");
         String priceQuery = "";
         String styleQuery = "";
+        String colorQuery = "";
         String andQuery = "and ";
         
         // See if there is a price constraint
@@ -43,14 +45,36 @@ public class Application extends Controller {
             // Do nothing
         }
         
-        // Let's build the query
-        if (priceQuery.length() > 0 && styleQuery.length() > 0) {
-            query.append(priceQuery + andQuery + styleQuery);
-        } else if (priceQuery.length() > 0) {
-            query.append(priceQuery);
-        } else if (priceQuery.length() > 0) {
-            query.append(styleQuery);
+        // See if there is a style constraint
+        if (color.equals("red")) {
+            colorQuery = "type is 'red' ";
+        } else if (color.equals("white")) {
+            colorQuery = "type is 'white' ";
+        } else {
+            // Do nothing
         }
+        
+        // Let's build the query
+        query.append(priceQuery);
+        
+        // Append style constraint
+        if (styleQuery.length() > 0) {
+            if (query.length() > 0) {
+                query.append(andQuery + styleQuery);
+            } else {
+                query.append(styleQuery);
+            }
+        }
+        
+        // Append style constraint
+        if (colorQuery.length() > 0) {
+            if (query.length() > 0) {
+                query.append(andQuery + colorQuery);
+            } else {
+                query.append(colorQuery);
+            }
+        }
+        
         query = query.append("order by price asc");
         
         // Finally, fetch the list of wines and return the result as a JSON object

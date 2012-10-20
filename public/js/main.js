@@ -17,8 +17,8 @@ $(function () {
   /* HTML Templates                         */
   /******************************************/
 
-  var wineResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Hooray! We\'ve found some wines just for you:</h2><a id="back-to-search" style="float:right" href="#">Modify your search</a></div>';
-  var wineNoResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Sorry, we couldn\'t find any wines that match your choices.</h2><a id="back-to-search" style="float:right" href="#">Modify your search</a><div>';
+  var wineResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Hooray! We\'ve found some wines just for you:</h2><a id="back-to-search" style="float:right" href="#">Modify your search</a> | <li class="dropdown" style="float:right" ><a href="#" class="dropdown-toggle" data-toggle="dropdown">Wine Listings <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="#">Red Wines</a></li><li><a href="#">White Wines</a></li><li><a href="#">Dessert Wines</a></li></ul></li></div>';
+  var wineNoResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Sorry, we couldn\'t find any wines that match your choices.</h2><a id="back-to-search" style="float:right" href="#">Modify your search</a> | <li class="dropdown" style="float:right" ><a href="#" class="dropdown-toggle" data-toggle="dropdown">Wine Listings <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="#">Red Wines</a></li><li><a href="#">White Wines</a></li><li><a href="#">Dessert Wines</a></li></ul></li><div>';
   var wineRow = '<div class="container well">' +
                   '<div class="bottle-img-container"><img class="bottle-img img-polaroid"></div>' +
                   '<div class="wine-info-box">' +
@@ -30,7 +30,7 @@ $(function () {
                     '<p class="wine-desc"></p>' +
                   '</div>' +
                 '</div>';
-  var resetBtn = '<div class="container" style="text-align:center;"><button id="resetsearch" class="btn btn-primary btn-large bigbutton">Start A New Search</button></div>';
+  var resetBtn = '<div class="container" style="text-align:center;"><button id="resetsearch" class="btn btn-info btn-large bigbutton">Start A New Search</button></div>';
 
   /******************************************/
   /* Global Helper Functions                */
@@ -45,10 +45,10 @@ $(function () {
   }
 
   function swapChoice(button, categoryName) {
-    $('.'+categoryName+'-btn').removeClass('btn-success');
+    $('.'+categoryName+'-btn').removeClass('btn-info');
     $('.'+categoryName+'-text').removeClass('chosen');
     $('.'+categoryName+'-caption').removeClass('chosen');
-    button.addClass('btn-success');
+    button.addClass('btn-info');
     button.siblings('.'+categoryName+'-text').addClass('chosen');
     button.siblings('.'+categoryName+'-caption').addClass('chosen');
   }
@@ -72,6 +72,11 @@ $(function () {
     swapChoice($this, 'style');
   });
 
+  $('.color-btn').on('click', function(e) {
+    var $this = $(this);
+    swapChoice($this, 'color');
+  });
+
   $('#submitsearch').on('click', function(e) {
     e.preventDefault();
 
@@ -80,7 +85,8 @@ $(function () {
 
     $.getJSON('/getwinelist', {
       price : $('.price-btn.active').val() || '',
-      style : $('.style-btn.active').val() || ''
+      style : $('.style-btn.active').val() || '',
+      color : $('.color-btn.active').val() || ''
     }, function(data) {
       if (data.length > 0) {
         wineList.append(wineResultsHeader)
