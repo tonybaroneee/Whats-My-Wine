@@ -1,12 +1,5 @@
 $(function () {
 
-  // Hide the address bar in mobile safari (iOS5)
-  if (navigator.userAgent.match(/OS 5(_\d)+ like Mac OS X/i)) {
-    setTimeout(function(){
-      window.scrollTo(0, 1);
-    }, 1000);
-  }
-
   // Initialize the qTip tooltip plugin, but dont bother if it's a mobile/touchscreen device
   if (!navigator.userAgent.match(/Android/i) &&
     !navigator.userAgent.match(/webOS/i) &&
