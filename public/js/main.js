@@ -17,8 +17,8 @@ $(function () {
   /* HTML Templates                         */
   /******************************************/
 
-  var wineResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Hooray! We\'ve found some wines just for you:</h2><a id="back-to-search" style="float:right" href="#">Modify your search</a> | <li class="dropdown" style="float:right" ><a href="#" class="dropdown-toggle" data-toggle="dropdown">Wine Listings <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="#">Red Wines</a></li><li><a href="#">White Wines</a></li><li><a href="#">Dessert Wines</a></li></ul></li></div>';
-  var wineNoResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Sorry, we couldn\'t find any wines that match your choices.</h2><a id="back-to-search" style="float:right" href="#">Modify your search</a> | <li class="dropdown" style="float:right" ><a href="#" class="dropdown-toggle" data-toggle="dropdown">Wine Listings <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="#">Red Wines</a></li><li><a href="#">White Wines</a></li><li><a href="#">Dessert Wines</a></li></ul></li><div>';
+  var wineResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Hooray! We\'ve found some wines just for you:</h2><a id="back-to-search" style="float:right" href="#">Modify your search</a></div>';
+  var wineNoResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Sorry, we couldn\'t find any wines that match your choices.</h2><a id="back-to-search" style="float:right" href="#">Modify your search</a><div>';
   var wineRow = '<div class="container well">' +
                   '<div class="bottle-img-container"><img class="bottle-img img-polaroid"></div>' +
                   '<div class="wine-info-box">' +
