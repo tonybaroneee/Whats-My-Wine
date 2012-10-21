@@ -12,13 +12,7 @@
     <link rel="shortcut icon" type="image/png" href="@{'/public/img/favicon.png'}">
 
     <link rel="stylesheet" href="@{'/public/css/bootstrap.min.css'}">
-    <style>
-        body {
-            padding-top: 60px;
-            padding-bottom: 40px;
-        }
-    </style>
-    <link rel="stylesheet" href="@{'/public/css/bootstrap-responsive.min.css'}">
+    <link rel="stylesheet" href="@{'/public/css/font-awesome.css'}">
     <link rel="stylesheet" href="@{'/public/css/main.css'}">
     #{get 'moreStyles' /}
 
@@ -93,5 +87,12 @@
     <script type="text/javascript" charset="${_response_encoding}" src="@{'/public/js/vendor/bootstrap.min.js'}"></script>
     <script type="text/javascript" charset="${_response_encoding}" src="@{'/public/js/main.js'}"></script>
     #{get 'moreScripts' /}
+
+    <script>
+    var _gaq=[['_setAccount','UA-29122927-5'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
   </body>
 </html>
