@@ -1,24 +1,6 @@
 #{extends 'main.html' /}
 #{set title:'What\'s My Wine | Home' /}
 
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <ul class="nav">
-        <li class="active"><a href="/">Home</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Wine Listings <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Red Wines</a></li>
-            <li><a href="#">White Wines</a></li>
-            <li><a href="#">Dessert Wines</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
 <div class="jumbotron masthead">
   <div class="container">
     <h1>What's My Wine?</h1>
@@ -60,7 +42,7 @@
       </div>
     </div>
 
-    <hr class="soften">
+    <hr id="top-style" class="soften">
 
     <h1>2. Choose your style.</h1>
     <p class="category-caption">Describe what your taste buds are craving.</p>
@@ -90,6 +72,8 @@
       </div>
     </div>
 
+    <hr id="top-color" class="soften">
+
     <h1>3. Choose your color.</h1>
     <p class="category-caption">Tell me if you only want whites or reds.</p>
 
@@ -113,9 +97,10 @@
       </div>
     </div>
 
-    <hr class="soften">
-
-    <button id="submitsearch" class="btn btn-success btn-large bigbutton">All finished. Show me the wines!</button>
+    <button id="submitsearch" class="btn btn-success btn-large bigbutton">
+      <span class="hidden-phone">All finished. Show me the wines!</span>
+      <span class="visible-phone">Show me the wines!</span>
+    </button>
 
   </div>
 </div>

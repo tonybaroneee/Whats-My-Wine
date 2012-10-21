@@ -29,6 +29,27 @@
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
 
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li class="dropdown visible-desktop">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Wine Listings <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/wines/red?sort=asc">Red Wines</a></li>
+                <li><a href="/wines/white?sort=asc">White Wines</a></li>
+                <li><a href="/wines/dessert?sort=asc">Dessert Wines</a></li>
+              </ul>
+            </li>
+            <li class="hidden-desktop"><a href="/wines/red?sort=asc">Reds</a></li>
+            <li class="hidden-desktop"><a href="/wines/white?sort=asc">Whites</a></li>
+            <li class="hidden-desktop"><a href="/wines/dessert?sort=asc">Desserts</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
     #{doLayout /}
 
     <footer class="footer">

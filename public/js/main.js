@@ -17,8 +17,8 @@ $(function () {
   /* HTML Templates                         */
   /******************************************/
 
-  var wineResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Hooray! We\'ve found some wines just for you:</h2><a id="back-to-search" style="float:right" href="#">Modify your search</a></div>';
-  var wineNoResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Sorry, we couldn\'t find any wines that match your choices.</h2><a id="back-to-search" style="float:right" href="#">Modify your search</a><div>';
+  var wineResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Hooray! We\'ve found some wines just for you:</h2><a id="back-to-search" style="float:right" href="#">Modify search</a></div>';
+  var wineNoResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Sorry, we couldn\'t find any wines that match your choices.</h2><a id="back-to-search" style="float:right" href="#">Modify search</a><div>';
   var wineRow = '<div class="container well">' +
                   '<div class="bottle-img-container"><img class="bottle-img img-polaroid"></div>' +
                   '<div class="wine-info-box">' +
@@ -37,10 +37,20 @@ $(function () {
   /******************************************/
 
   function goToByScroll(id) {
+    var extra = 0;
+    if (!navigator.userAgent.match(/Android/i) &&
+      !navigator.userAgent.match(/webOS/i) &&
+      !navigator.userAgent.match(/iPhone/i) &&
+      !navigator.userAgent.match(/iPod/i) &&
+      !navigator.userAgent.match(/iPad/i) &&
+      !navigator.userAgent.match(/Blackberry/i)) {
+      // Mobile browser not detected, enable tooltips
+      extra = $('.navbar').height();
+    }
     if (id === '') {
-      $('html,body').animate({scrollTop: 0}, 'fast');
+      $(jQuery.browser.webkit ? 'body': 'html').animate({scrollTop: 0}, 'fast');
     } else {
-      $('html,body').animate({scrollTop: $("#"+id).offset().top - 41});
+      $(jQuery.browser.webkit ? 'body': 'html').animate({scrollTop: $("#"+id).offset().top - extra});
     }
   }
 
@@ -65,11 +75,13 @@ $(function () {
   $('.price-btn').on('click', function(e) {
     var $this = $(this);
     swapChoice($this, 'price');
+    goToByScroll('top-style');
   });
 
   $('.style-btn').on('click', function(e) {
     var $this = $(this);
     swapChoice($this, 'style');
+    goToByScroll('top-color');
   });
 
   $('.color-btn').on('click', function(e) {

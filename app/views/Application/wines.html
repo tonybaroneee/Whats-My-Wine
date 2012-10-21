@@ -1,0 +1,27 @@
+#{extends 'main.html' /}
+#{set title:'What\'s My Wine | Wine List' /}
+
+<div class="jumbotron masthead">
+  <div style="text-align:left;" class="container">
+    <h1>Viewing All:</h1>
+    <p style="text-transform: capitalize;">${type} Wines</p>
+  </div>
+</div>
+
+<div id="wine-list" class="container">
+  <div id="wine-list-header-container" class="container"><h2 class="results-header">Here is the complete list of wines:</h2></div>
+  #{list wineList}
+  <div class="container well">
+    <div class="bottle-img-container"><img src="/public/img/wines/${_.image}" class="bottle-img img-polaroid"></div>
+    <div class="wine-info-box">
+      <h1 class="wine-price">${"\$"}${_.price}</h1>
+      <h4 class="wine-alc">${_.alc}${"%"} alc.</h4>
+      <h3 class="wine-title">${_.name}</h3>
+      <h5 class="wine-location"><i class="icon-globe"></i> ${_.location}</h5>
+      <h5 class="wine-type"><i class="icon-glass"></i> ${_.type}</h5><hr class="soften wine-row-line"></hr>
+      <p class="wine-desc">${_.description}</p>
+    </div>
+  </div>
+  #{/list}
+  <div class="container" style="text-align:center;"><a href="/" class="btn btn-info btn-large bigbutton">Go Back Home</a></div>
+</div>

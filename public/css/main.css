@@ -189,7 +189,7 @@ hr.soften {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(../img/wine-sil.png) no-repeat left bottom;
+  background: url(../img/wine-sil.png) no-repeat right bottom;
   opacity: .4;
 }
 
@@ -982,11 +982,24 @@ form.bs-docs-example {
     display: block;
   }
 
+  .jumbotron {
+    padding: 15px 20px 84px 20px;
+  }
+
+  .jumbotron:after {
+    background-position: -20px bottom;
+  }
+
   /* Downsize the jumbotrons */
   .jumbotron h1 {
-    font-size: 60px;
+    letter-spacing: -1px;
+    font-size: 32px;
+    padding-bottom: 20px;
   }
-  .jumbotron p,
+  .jumbotron p {
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
   .jumbotron .btn {
     font-size: 20px;
   }
@@ -1003,7 +1016,41 @@ form.bs-docs-example {
 
   /* Marketing on home */
   .marketing h1 {
-    font-size: 40px;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  .marketing h2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .marketing .category-caption {
+    font-size: 16px;
+  }
+
+  .marketing .row-fluid button {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+  }
+
+  .marketing .row-fluid button,
+  .marketing .row-fluid button i {
+    font-size: 20px;
+  }
+
+  .marketing .row-fluid .style-btn,
+  .marketing .row-fluid .color-btn {
+    font-size: 14px;
+  }
+
+  #submitsearch {
+    font-size: 20px;
+  }
+
+  #wine-list .results-header {
+    font-size: 20px;
   }
 
   /* center example sites */

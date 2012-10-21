@@ -81,5 +81,21 @@ public class Application extends Controller {
         wineList = Wine.find(query.toString()).fetch();
         renderJSON(wineList);
     }
+    
+    public static void wines(String type) {
+        String sort = request.params.get("sort");
+        String sortQuery = "";
+        
+        if (sort.equalsIgnoreCase("desc")) {
+            sortQuery = "order by price desc";
+        } else {
+            sortQuery = "order by price asc";
+        }
+        
+        List<Wine> wineList = Wine.find("type is ? " + sortQuery, type).fetch();
+        renderArgs.put("type", type);
+        renderArgs.put("wineList", wineList);
+        render();
+    }
 
 }

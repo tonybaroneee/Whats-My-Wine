@@ -296,7 +296,7 @@ Wine(ravenswoodZin):
 
 Wine(heronhillVidal):
     name: 2008 Heron Hill Late Harvest Vidal Blanc (375ml)
-    type: dessert (Very sweet)
+    type: dessert
     location: Finger Lakes, NY
     world: new
     style: 2
@@ -452,7 +452,7 @@ Wine(trumpeterMalbec):
 
 Wine(eisweinBlend):
     name: 2009 Schmitt-Sohne Eiswein Blend (500ml)
-    type: dessert (Very sweet)
+    type: dessert
     location: Pfalz, Germany
     world: old
     style: 2
