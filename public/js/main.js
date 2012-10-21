@@ -1,24 +1,24 @@
 $(function () {
 
   // Initialize the qTip tooltip plugin, but dont bother if it's a mobile/touchscreen device
-  if (!navigator.userAgent.match(/Android/i) &&
-    !navigator.userAgent.match(/webOS/i) &&
-    !navigator.userAgent.match(/iPhone/i) &&
-    !navigator.userAgent.match(/iPod/i) &&
-    !navigator.userAgent.match(/iPad/i) &&
-    !navigator.userAgent.match(/Blackberry/i)) {
-    // Mobile browser not detected, enable tooltips
-    $('body').tooltip({
-      selector: '[rel=tooltip]'
-    });
-  }
+  // if (!navigator.userAgent.match(/Android/i) &&
+  //   !navigator.userAgent.match(/webOS/i) &&
+  //   !navigator.userAgent.match(/iPhone/i) &&
+  //   !navigator.userAgent.match(/iPod/i) &&
+  //   !navigator.userAgent.match(/iPad/i) &&
+  //   !navigator.userAgent.match(/Blackberry/i)) {
+  //   // Mobile browser not detected, enable tooltips
+  //   $('body').tooltip({
+  //     selector: '[rel=tooltip]'
+  //   });
+  // }
 
   /******************************************/
   /* HTML Templates                         */
   /******************************************/
 
-  var wineResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Hooray! We\'ve found some wines just for you:</h2><a id="back-to-search" style="float:right" href="#">Modify search</a></div>';
-  var wineNoResultsHeader = '<div id="wine-list-header-container" class="container"><h2 class="results-header">Sorry, we couldn\'t find any wines that match your choices.</h2><a id="back-to-search" style="float:right" href="#">Modify search</a><div>';
+  var wineResultsHeader = '<hr class="soften"><div id="wine-list-header-container" class="container"><h2 class="results-header">Hooray! We\'ve found some wines just for you:</h2><a id="back-to-search" style="float:right" href="#">Modify search</a></div>';
+  var wineNoResultsHeader = '<hr class="soften"><div id="wine-list-header-container" class="container"><h2 class="results-header">Sorry, we couldn\'t find any wines that match your choices.</h2><a id="back-to-search" style="float:right" href="#">Modify search</a><div>';
   var wineRow = '<div class="container well">' +
                   '<div class="bottle-img-container"><img class="bottle-img img-polaroid"></div>' +
                   '<div class="wine-info-box">' +
@@ -72,21 +72,34 @@ $(function () {
     goToByScroll("search-start");
   });
 
+  $("#search-start").on({
+    mouseenter: function() {
+      $(this).siblings('h2').css('font-weight', 'bold');
+    },
+    mouseleave: function() {
+      $(this).siblings('h2').css('font-weight', '');
+    }
+  }, 'button');
+
   $('.price-btn').on('click', function(e) {
     var $this = $(this);
     swapChoice($this, 'price');
-    goToByScroll('top-style');
+    setTimeout(function(){goToByScroll('top-style')},300);;
   });
 
   $('.style-btn').on('click', function(e) {
     var $this = $(this);
     swapChoice($this, 'style');
-    goToByScroll('top-color');
+    setTimeout(function(){goToByScroll('top-color')},300);
   });
 
   $('.color-btn').on('click', function(e) {
     var $this = $(this);
     swapChoice($this, 'color');
+    if ($('#wine-list').is(':hidden')) {
+      // Scroll to bottom to reveal the "Show me the wines!" button
+      setTimeout(function(){$(jQuery.browser.webkit ? 'body': 'html').animate({scrollTop: $(window).scrollTop() + $(window).height() - $('.footer').height()})},300);
+    }
   });
 
   $('#submitsearch').on('click', function(e) {

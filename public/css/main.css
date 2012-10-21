@@ -317,16 +317,45 @@ hr.soften {
 	width: 120px;
   height: 120px;
 }
+.marketing .row-fluid button:hover {
+  border-color: #BBB;
+  border-color: rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.45);
+}
 .marketing .row-fluid button,
 .marketing .row-fluid button i {
   font-size: 40px;
 }
 
-.marketing .row-fluid .style-btn,
-.marketing .row-fluid .color-btn {
+.marketing .row-fluid .style-btn:not(.anything),
+.marketing .row-fluid .color-btn:not(.anything) {
   font-size: 28px;
 }
+.marketing .row-fluid .style-btn.active:not(.anything) {
+  background-color: #2F96B4;
+}
 
+.marketing .row-fluid .style-btn:not(.anything):hover {
+  background-position:center center;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.marketing .row-fluid .style-crisp {
+  background: whiteSmoke url('/public/img/crisp.png') no-repeat center center;
+}
+
+.marketing .row-fluid .style-fruity {
+  background: whiteSmoke url('/public/img/fruity.png') no-repeat center center;
+}
+
+.marketing .row-fluid .style-bold {
+  background: whiteSmoke url('/public/img/bold.png') no-repeat center center;
+}
+
+.marketing .row-fluid .style-btn {
+  background-size: cover;
+}
 
 
 /* Footer
@@ -1106,7 +1135,7 @@ form.bs-docs-example {
 .bigbutton {
   font-size: 26px;
   padding: 15px 30px;
-  margin: 50px 0;
+  margin: 25px 0;
 }
 h2.chosen {
   font-weight: bold;
@@ -1123,8 +1152,8 @@ h2.chosen {
 }
 #back-to-search {
   position: absolute;
-  right: -30px;
-  bottom: 40px;
+  right: 0;
+  bottom: 37px;
 }
 #wine-list .bottle-img-container {
   float: left;
