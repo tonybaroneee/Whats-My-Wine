@@ -33,8 +33,18 @@
       <div class="navbar-inner">
         <div class="container">
           <ul class="nav">
+            #{if home}
             <li class="active"><a href="/">Home</a></li>
+            #{/if}
+            #{else}
+            <li><a href="/">Home</a></li>
+            #{/else}
+            #{if type}
+            <li class="active dropdown visible-desktop">
+            #{/if}
+            #{else}
             <li class="dropdown visible-desktop">
+            #{/else}
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Wine Listings <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="/wines/red?sort=asc">Red Wines</a></li>
@@ -42,14 +52,29 @@
                 <li><a href="/wines/dessert?sort=asc">Dessert Wines</a></li>
               </ul>
             </li>
+            #{if type == 'red'}
+            <li class="active hidden-desktop"><a href="/wines/red?sort=asc">Reds</a></li>
+            #{/if}
+            #{else}
             <li class="hidden-desktop"><a href="/wines/red?sort=asc">Reds</a></li>
+            #{/else}
+            #{if type == 'white'}
+            <li class="active hidden-desktop"><a href="/wines/white?sort=asc">Whites</a></li>
+            #{/if}
+            #{else}
             <li class="hidden-desktop"><a href="/wines/white?sort=asc">Whites</a></li>
+            #{/else}
+            #{if type == 'dessert'}
+            <li class="active hidden-desktop"><a href="/wines/dessert?sort=asc">Desserts</a></li>
+            #{/if}
+            #{else}
             <li class="hidden-desktop"><a href="/wines/dessert?sort=asc">Desserts</a></li>
+            #{/else}
           </ul>
         </div>
       </div>
     </div>
-    
+
     #{doLayout /}
 
     <footer class="footer">
