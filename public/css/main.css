@@ -37,7 +37,11 @@
 /* Body and structure
 -------------------------------------------------- */
 
+html {
+}
+
 body {
+  background: #F7F7F7 url(../img/bg.png) repeat center top;
   position: relative;
   padding-top: 40px;
 }
@@ -297,13 +301,12 @@ hr.soften {
 }
 .marketing .category-caption, 
 .marketing .category-error {
-  margin-bottom: 50px;
   font-size: 20px;
   font-weight: 300;
   line-height: 25px;
 }
 .marketing .category-caption {
-  color: #999;
+  color: #777;
   white-space: normal;
 }
 .marketing .category-error {
@@ -341,20 +344,20 @@ hr.soften {
   -o-transition: none;
   transition: none;
 }
-.marketing .row-fluid .style-crisp {
+.marketing .style-crisp {
   background: whiteSmoke url('/public/img/crisp.png') no-repeat center center;
 }
 
-.marketing .row-fluid .style-fruity {
+.marketing .style-fruity {
   background: whiteSmoke url('/public/img/fruity.png') no-repeat center center;
 }
 
-.marketing .row-fluid .style-bold {
+.marketing .style-bold {
   background: whiteSmoke url('/public/img/bold.png') no-repeat center center;
 }
 
-.marketing .row-fluid .style-btn {
-  background-size: cover;
+.marketing .style-btn {
+  /*background-size: cover;*/
 }
 
 
@@ -964,8 +967,9 @@ form.bs-docs-example {
   .marketing .span4 {
     margin-bottom: 40px;
   }
-  .bs-docs-social {
-    margin: 0 -20px;
+
+  .button-nav li {
+    max-width: 178px;
   }
 
   /* Space out the show-grid examples */
@@ -1045,6 +1049,10 @@ form.bs-docs-example {
   .subhead h1,
   .subhead p {
     text-align: center;
+  }
+
+  .button-nav li {
+    max-width: 480px;
   }
 
   /* Marketing on home */
@@ -1129,9 +1137,113 @@ form.bs-docs-example {
 }
 
 /* Custom styles */
-.price-btn {
+.button-nav {
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.button-nav li {
+  position: relative;
+  display: inline-block;
+  margin-right: -8px;
+  padding-top: 20px;
+  vertical-align: top;
+}
+
+.button-nav li h2 {
+  margin-top: -10px;
+  font-size: 26px;
+}
+
+.button-nav li .category-caption {
+  font-size: 16px;
+}
+
+.button-nav a {
+  display: inline-block;
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+  color: #666;
+  margin: 36px;
+  width: 105px;
+  height: 105px;
+  position: relative;
+  text-align: center;
+  line-height: 105px;
+  font-size: 22px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+}
+
+.button-nav a.type-btn:not(.anything) {
+  font-size: 32px;
+}
+
+.button-nav a:not(.anything) {
+  letter-spacing: -3px;
+}
+
+.button-nav a::before {
+  content: "";
+  display: block;
+  background: #fff;
+  border-top: 2px solid #ddd;
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  bottom: -18px;
+  right: -18px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: inset 0px 8px 48px #ddd;
+}
+
+.button-nav a:not(.pic-btn):hover {
+  text-decoration: none;
+  color: #222;
+  background: #f5f5f5;
+}
+
+.button-nav a.price-btn {
   color: olive;
 }
+
+.button-nav a.price-btn:hover {
+  color: #464600;
+}
+
+.button-nav a:not(.pic-btn):active, .button-nav a.active:not(.pic-btn) {
+  background-color: #e7e7e7;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e7e7e7), to(#f7f7f7));
+  background-image: -webkit-linear-gradient(top, #e7e7e7, #f7f7f7); 
+  background-image: -moz-linear-gradient(top, #e7e7e7, #f7f7f7); 
+  background-image: -ms-linear-gradient(top, #e7e7e7, #f7f7f7); 
+  background-image: -o-linear-gradient(top, #e7e7e7, #f7f7f7); 
+  box-shadow: inset 0px 4px 10px #bfbfbf;
+}
+
+
+.button-nav a:active, .button-nav a.active {
+  box-shadow: inset 0px 4px 10px #bfbfbf;
+}
+
+.button-nav a.active {
+  box-shadow: inset 0px 4px 10px #cfcfcf;
+}
+
+.button-nav a.pic-btn:active, .button-nav a.pic-btn.active {
+  box-shadow: inset 0px 4px 10px #888;
+}
+
+.button-nav a.pic-btn.active {
+  box-shadow: inset 0px 4px 10px #AAA;
+}
+
 .bigbutton {
   font-size: 26px;
   padding: 15px 30px;
@@ -1140,12 +1252,8 @@ form.bs-docs-example {
 h2.chosen {
   font-weight: bold;
 }
-#search-start button.active {
-  -webkit-box-shadow: 0 0 25px rgba(82, 168, 236, .5);
-          box-shadow: 0 0 25px rgba(82, 168, 236, .5);
-}
 #submitsearch {
-  margin-top: 0;
+  margin-top: 40px;
 }
 #wine-list-header-container {
   position: relative;

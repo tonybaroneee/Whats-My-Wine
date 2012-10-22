@@ -55,10 +55,10 @@ $(function () {
   }
 
   function swapChoice(button, categoryName) {
-    $('.'+categoryName+'-btn').removeClass('btn-info');
+    $('.'+categoryName+'-btn').removeClass('active');
+    button.addClass('active');
     $('.'+categoryName+'-text').removeClass('chosen');
     $('.'+categoryName+'-caption').removeClass('chosen');
-    button.addClass('btn-info');
     button.siblings('.'+categoryName+'-text').addClass('chosen');
     button.siblings('.'+categoryName+'-caption').addClass('chosen');
   }
@@ -72,28 +72,31 @@ $(function () {
     goToByScroll("search-start");
   });
 
-  $("#search-start").on({
+  $(".button-nav").on({
     mouseenter: function() {
       $(this).siblings('h2').css('font-weight', 'bold');
     },
     mouseleave: function() {
       $(this).siblings('h2').css('font-weight', '');
     }
-  }, 'button');
+  }, 'a');
 
   $('.price-btn').on('click', function(e) {
+    e.preventDefault();
     var $this = $(this);
     swapChoice($this, 'price');
     setTimeout(function(){goToByScroll('top-style')},300);;
   });
 
   $('.style-btn').on('click', function(e) {
+    e.preventDefault();
     var $this = $(this);
     swapChoice($this, 'style');
     setTimeout(function(){goToByScroll('top-color')},300);
   });
 
   $('.type-btn').on('click', function(e) {
+    e.preventDefault();
     var $this = $(this);
     swapChoice($this, 'type');
   });
@@ -106,9 +109,9 @@ $(function () {
     wineList.empty();
 
     $.getJSON('/getwinelist', {
-      price : $('.price-btn.active').val() || '',
-      style : $('.style-btn.active').val() || '',
-      type : $('.type-btn.active').val() || ''
+      price : $('.price-btn.active').data('value') || '',
+      style : $('.style-btn.active').data('value') || '',
+      type : $('.type-btn.active').data('value') || ''
     }, function(data) {
       if (data.length > 0) {
         wineList.append(wineResultsHeader)
@@ -166,8 +169,9 @@ $(function () {
   $('#wine-list').on('click', '#resetsearch', function(e) {
     e.preventDefault();
     goToByScroll("search-start");
-    $('#wine-list').fadeOut('fast', function() {
-    });
+    $('a.active').removeClass('active');
+    $('a.anything').addClass('active');
+    $('#wine-list').fadeOut('fast');
   });
 
   $('#back-to-top').on('click', function(e) {

@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+
+.icon-glass:before { content: '🍸'; } /* '\1f378' */
+.icon-dollar:before { content: '💵'; } /* '\1f4b5' */

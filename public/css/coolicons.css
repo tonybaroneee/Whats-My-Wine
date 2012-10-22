@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'coolicons';
+  src: url("../font/coolicons.eot");
+  src: url("../font/coolicons.eot?#iefix") format('embedded-opentype'),
+       url("../font/coolicons.woff") format('woff'),
+       url("../font/coolicons.ttf") format('truetype'),
+       url("../font/coolicons.svg#coolicons") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class*="fonticon-"] {
+  font-family: 'coolicons';
+  font-style: normal;
+  speak: none;
+}
+
+.fonticon-glass:after { content: '\1f378'; } /* '\1f378' */
+.fonticon-dollar:after { content: '\1f4b5'; } /* '\1f4b5' */

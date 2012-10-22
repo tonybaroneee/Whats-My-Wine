@@ -11,6 +11,7 @@
   </div>
 </div>
 
+
 <div id="search-start" class="container">
   <div class="marketing">
 
@@ -18,28 +19,37 @@
     <p class="category-caption">How much are you willing to pay?</p>
 
     <div class="row-fluid">
-      <div class="btn-group" data-toggle="buttons-radio">
-        <div class="span3">
-          <button type="button" class="btn btn-info price-btn active anything" value="" rel="tooltip" data-title="Select this option">...</button>
+      <ul class="button-nav">
+        <li class="span3">
+          <a href="" class="active price-btn anything" rel="tooltip" data-title="Select this option">...</a>
           <h2 class="price-text chosen">Anything!</h2>
           <p class="category-caption">I don't care about the price.</p>
-        </div>
-        <div class="span3">
-          <button type="button" class="btn price-btn" value="low" rel="tooltip" data-title="Select this option">$</button>
+        </li>
+        <li class="span3">
+          <a href="" class="price-btn" data-value="low" rel="tooltip" data-title="Select this option">
+            <i class="fonticon-dollar"></i>
+          </a>
           <h2 class="price-text">$5 - $10</h2>
           <p class="category-caption">Inexpensive</p>
-        </div>
-        <div class="span3">
-          <button type="button" class="btn price-btn" value="mid" rel="tooltip" data-title="Select this option">$$</button>
+        </li>
+        <li class="span3">
+          <a href="" class="price-btn" data-value="mid" rel="tooltip" data-title="Select this option">
+            <i class="fonticon-dollar"></i>
+            <i class="fonticon-dollar"></i>
+          </a>
           <h2 class="price-text">$11 - $17</h2>
           <p class="category-caption">Mid-Range</p>
-        </div>
-        <div class="span3">
-          <button type="button" class="btn price-btn" value="high" rel="tooltip" data-title="Select this option">$$$</button>
+        </li>
+        <li class="span3">
+          <a href="" class="price-btn" data-value="high" rel="tooltip" data-title="Select this option">
+            <i class="fonticon-dollar"></i>
+            <i class="fonticon-dollar"></i>
+            <i class="fonticon-dollar"></i>
+          </a>
           <h2 class="price-text">$18 +</h2>
           <p class="category-caption">Gettin' Fancy!</p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
 
     <hr id="top-style" class="soften">
@@ -48,28 +58,28 @@
     <p class="category-caption">Describe what your taste buds are craving.</p>
 
     <div class="row-fluid">
-      <div class="btn-group" data-toggle="buttons-radio">
-        <div class="span3">
-          <button type="button" class="btn btn-info style-btn active anything" value="" rel="tooltip" data-title="Select this option">...</button>
-          <h2 class="style-text chosen">Anything!</h2>
+      <ul class="button-nav">
+        <li class="span3">
+          <a href="" class="active style-btn anything">...</a>
+          <h2 class="style-text chosen" style="padding-top: 5px;">Anything!</h2>
           <p class="category-caption">I don't care about the style.</p>
-        </div>
-        <div class="span3">
-          <button type="button" class="btn style-btn style-crisp" value="1" rel="tooltip" data-title="Select this option"></button>
+        </li>
+        <li class="span3">
+          <a href="" class="style-btn pic-btn style-crisp" data-value="1" rel="tooltip" data-title="Select this option"></a>
           <h2 class="style-text">Lightweight</h2>
           <p class="category-caption">Crisp, refreshing taste with high acidity.</p>
-        </div>
-        <div class="span3">
-          <button type="button" class="btn style-btn style-fruity" value="2" rel="tooltip" data-title="Select this option"></button>
+        </li>
+        <li class="span3">
+          <a href="" class="style-btn pic-btn style-fruity" data-value="2" rel="tooltip" data-title="Select this option"></a>
           <h2 class="style-text"><span class="visible-desktop">Fruity &amp; Smooth</span><span class="hidden-desktop">Smooth</span></h2>
           <p class="category-caption">Lots of juicy fruit that goes down easy.</p>
-        </div>
-        <div class="span3">
-          <button type="button" class="btn style-btn style-bold" value="3" rel="tooltip" data-title="Select this option"></button>
+        </li>
+        <li class="span3">
+          <a href="" class="style-btn pic-btn style-bold" data-value="3" rel="tooltip" data-title="Select this option"></a>
           <h2 class="style-text">Big &amp; Bold</h2>
-          <p class="category-caption">Concentrated fruit with hints of spices and vanilla/nutty flavor.</p>
-        </div>
-      </div>
+          <p class="category-caption">Concentrated fruit with hints of vanilla/nuts.</p>
+        </li>
+      </ul>
     </div>
 
     <hr id="top-color" class="soften">
@@ -78,28 +88,34 @@
     <p class="category-caption">Tell us if you only want whites, reds, or dessert wines.</p>
 
     <div class="row-fluid">
-      <div class="btn-group" data-toggle="buttons-radio">
-        <div class="span3">
-          <button type="button" class="btn btn-info type-btn active anything" value="" rel="tooltip" data-title="Select this option">...</button>
+      <ul class="button-nav">
+        <li class="span3">
+          <a href="" class="active type-btn anything">...</a>
           <h2 class="type-text chosen">Anything!</h2>
           <p class="category-caption">I don't care about the type.</p>
-        </div>
-        <div class="span3">
-          <button type="button" class="btn type-btn" value="white" rel="tooltip" data-title="Select this option"><i style="color: #FFFADF;text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);" class="icon-glass"></i></button>
+        </li>
+        <li class="span3">
+          <a href="" class="type-btn" data-value="white" rel="tooltip" data-title="Select this option">
+            <i style="color: #FFFADF;text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);" class="fonticon-glass"></i>
+          </a>
           <h2 class="type-text">White wines</h2>
-          <p class="category-caption">Light, crisp, fruity flavor and aroma.</p>
-        </div>
-        <div class="span3">
-          <button type="button" class="btn type-btn" value="red" rel="tooltip" data-title="Select this option"><i style="color:#A21919;" class="icon-glass"></i></button>
+          <p class="category-caption">Crisp, refreshing taste with high acidity.</p>
+        </li>
+        <li class="span3">
+          <a href="" class="type-btn" data-value="red" rel="tooltip" data-title="Select this option">
+            <i style="color:#A21919;text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);" class="fonticon-glass"></i>
+          </a>
           <h2 class="type-text">Red wines</h2>
-          <p class="category-caption">Darker red/black grapes <br>with a richer body.</p>
-        </div>
-        <div class="span3">
-          <button type="button" class="btn type-btn" value="dessert" rel="tooltip" data-title="Select this option"><i style="color:#FFB737;" class="icon-glass"></i></button>
+          <p class="category-caption">Darker red/black berry taste with a richer body.</p>
+        </li>
+        <li class="span3">
+          <a href="" class="type-btn" data-value="dessert" rel="tooltip" data-title="Select this option">
+            <i style="color:#FFA300;text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);" class="fonticon-glass"></i>
+          </a>
           <h2 class="type-text">Dessert wines</h2>
-          <p class="category-caption">For the sweet tooth, pair this with your favorite dessert. <br><span style="font-size: 70%;">NOTE: Style will be ignored.</span></p>
-        </div>
-      </div>
+          <p class="category-caption">Very sweet, most common with dessert. <br><span style="font-size: 70%;">NOTE: Style will be ignored.</span></p>
+        </li>
+      </ul>
     </div>
 
     <button id="submitsearch" class="btn btn-success btn-large bigbutton">
