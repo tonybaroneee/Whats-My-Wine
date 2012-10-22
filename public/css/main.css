@@ -209,6 +209,17 @@ hr.soften {
   opacity: .4;
 }
 
+/* View All Wines page */
+
+#viewing-wine-header {
+  letter-spacing: -1px;
+  padding-left: 50px;
+}
+#wine-type-header {
+  padding-left: 65px;
+  text-transform: capitalize;
+}
+
 /* Masthead (docs home)
 ------------------------- */
 .masthead {
@@ -976,6 +987,13 @@ form.bs-docs-example {
     margin-bottom: 40px;
   }
 
+  #viewing-wine-header {
+    padding-left: 50px;
+  }
+  #wine-type-header {
+    padding-left: 70px;
+  }
+
   .button-nav li {
     max-width: 178px;
   }
@@ -1096,6 +1114,10 @@ form.bs-docs-example {
 
   #wine-list .results-header {
     font-size: 20px;
+  }
+
+  #viewing-wine-header {
+    padding-left: 0;
   }
 
   #wine-type-header {
@@ -1314,7 +1336,3 @@ h2.chosen {
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, .3), rgba(0, 0, 0, .05));
 }
 
-/* View All Wines page */
-#wine-type-header {
-  text-transform: capitalize;
-}
