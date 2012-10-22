@@ -37,9 +37,6 @@
 /* Body and structure
 -------------------------------------------------- */
 
-html {
-}
-
 body {
   background: #F7F7F7 url(../img/bg.png) repeat center top;
   position: relative;
@@ -50,6 +47,11 @@ body {
 h3 code {
   font-size: 14px;
   font-weight: normal;
+}
+
+.well {
+  background-color: #fafafa;
+  border-radius: 5px;
 }
 
 
@@ -368,7 +370,7 @@ hr.soften {
   padding: 30px 0;
   margin-top: 70px;
   border-top: 1px solid #e5e5e5;
-  background-color: #f5f5f5;
+  background-color: white;
 }
 .footer p {
   margin-bottom: 0;
