@@ -239,7 +239,7 @@ Wine(willamettePinotNoir):
     type: red
     location: Willamette Valley, Oregon
     world: new
-    style: 1
+    style: 2
     price: 20
     alc: 12.5
     oaked: No
@@ -251,7 +251,7 @@ Wine(pindarMerlot):
     type: red
     location: North Fork of Long Island, NY
     world: new
-    style: 1
+    style: 2
     price: 10
     alc: 12.5
     oaked: 

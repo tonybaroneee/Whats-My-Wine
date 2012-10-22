@@ -15,13 +15,13 @@ public class Application extends Controller {
     public static void getWineList() {
         String price = request.params.get("price");
         String style = request.params.get("style");
-        String color = request.params.get("color");
+        String type = request.params.get("type");
 
         List<Wine> wineList;
         StringBuilder query = new StringBuilder("");
         String priceQuery = "";
         String styleQuery = "";
-        String colorQuery = "";
+        String typeQuery = "";
         String andQuery = "and ";
         
         // See if there is a price constraint
@@ -35,22 +35,26 @@ public class Application extends Controller {
             // Do nothing
         }
         
-        // See if there is a style constraint
-        if (style.equals("1")) {
-            styleQuery = "style is 1 ";
-        } else if (style.equals("2")) {
-            styleQuery = "style is 2 ";
-        } else if (style.equals("3")) {
-            styleQuery = "style is 3 ";
-        } else {
-            // Do nothing
+        // See if there is a style constraint (don't account for this if they selected dessert wine)
+        if (!type.equals("dessert")) {
+            if (style.equals("1")) {
+                styleQuery = "style is 1 ";
+            } else if (style.equals("2")) {
+                styleQuery = "style is 2 ";
+            } else if (style.equals("3")) {
+                styleQuery = "style is 3 ";
+            } else {
+                // Do nothing
+            }
         }
         
         // See if there is a style constraint
-        if (color.equals("red")) {
-            colorQuery = "type is 'red' ";
-        } else if (color.equals("white")) {
-            colorQuery = "type is 'white' ";
+        if (type.equals("red")) {
+            typeQuery = "type is 'red' ";
+        } else if (type.equals("white")) {
+            typeQuery = "type is 'white' ";
+        } else if (type.equals("dessert")) {
+            typeQuery = "type is 'dessert' ";
         } else {
             // Do nothing
         }
@@ -68,11 +72,11 @@ public class Application extends Controller {
         }
         
         // Append style constraint
-        if (colorQuery.length() > 0) {
+        if (typeQuery.length() > 0) {
             if (query.length() > 0) {
-                query.append(andQuery + colorQuery);
+                query.append(andQuery + typeQuery);
             } else {
-                query.append(colorQuery);
+                query.append(typeQuery);
             }
         }
         

@@ -93,25 +93,22 @@ $(function () {
     setTimeout(function(){goToByScroll('top-color')},300);
   });
 
-  $('.color-btn').on('click', function(e) {
+  $('.type-btn').on('click', function(e) {
     var $this = $(this);
-    swapChoice($this, 'color');
-    if ($('#wine-list').is(':hidden')) {
-      // Scroll to bottom to reveal the "Show me the wines!" button
-      setTimeout(function(){$(jQuery.browser.webkit ? 'body': 'html').animate({scrollTop: $(window).scrollTop() + $(window).height() - $('.footer').height()})},300);
-    }
+    swapChoice($this, 'type');
   });
 
   $('#submitsearch').on('click', function(e) {
     e.preventDefault();
 
+    $('#loading-text').show();
     var wineList = $('#wine-list');
     wineList.empty();
 
     $.getJSON('/getwinelist', {
       price : $('.price-btn.active').val() || '',
       style : $('.style-btn.active').val() || '',
-      color : $('.color-btn.active').val() || ''
+      type : $('.type-btn.active').val() || ''
     }, function(data) {
       if (data.length > 0) {
         wineList.append(wineResultsHeader)
@@ -147,7 +144,10 @@ $(function () {
           wineList.append(wineRowHTML.get(0).outerHTML);
         }
       }
-      wineList.append(resetBtn);
+      if (data.length > 0) {
+        wineList.append(resetBtn)
+      }
+      $('#loading-text').hide();
       if (wineList.is(':hidden')) {
         wineList.fadeIn(function() {
           goToByScroll('wine-list-header-container');

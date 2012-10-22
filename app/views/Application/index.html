@@ -74,25 +74,30 @@
 
     <hr id="top-color" class="soften">
 
-    <h1>3. Choose your color.</h1>
-    <p class="category-caption">Tell me if you only want whites or reds.</p>
+    <h1>3. Choose your type.</h1>
+    <p class="category-caption">Tell us if you only want whites, reds, or dessert wines.</p>
 
     <div class="row-fluid">
       <div class="btn-group" data-toggle="buttons-radio">
-        <div class="span4">
-          <button type="button" class="btn btn-info color-btn active anything" value="" rel="tooltip" data-title="Select this option">...</button>
-          <h2 class="color-text chosen">Anything!</h2>
-          <p class="category-caption">I don't care about the color.</p>
+        <div class="span3">
+          <button type="button" class="btn btn-info type-btn active anything" value="" rel="tooltip" data-title="Select this option">...</button>
+          <h2 class="type-text chosen">Anything!</h2>
+          <p class="category-caption">I don't care about the type.</p>
         </div>
-        <div class="span4">
-          <button type="button" class="btn color-btn" value="white" rel="tooltip" data-title="Select this option"><i style="color:gold;" class="icon-glass"></i></button>
-          <h2 class="color-text">Only white wines</h2>
+        <div class="span3">
+          <button type="button" class="btn type-btn" value="white" rel="tooltip" data-title="Select this option"><i style="color: #FFFADF;text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);" class="icon-glass"></i></button>
+          <h2 class="type-text">White wines</h2>
           <p class="category-caption">Light, crisp, fruity flavor and aroma.</p>
         </div>
-        <div class="span4">
-          <button type="button" class="btn color-btn" value="red" rel="tooltip" data-title="Select this option"><i style="color:#A21919;" class="icon-glass"></i></button>
-          <h2 class="color-text">Only red wines</h2>
+        <div class="span3">
+          <button type="button" class="btn type-btn" value="red" rel="tooltip" data-title="Select this option"><i style="color:#A21919;" class="icon-glass"></i></button>
+          <h2 class="type-text">Red wines</h2>
           <p class="category-caption">Darker red/black grapes <br>with a richer body.</p>
+        </div>
+        <div class="span3">
+          <button type="button" class="btn type-btn" value="dessert" rel="tooltip" data-title="Select this option"><i style="color:#FFB737;" class="icon-glass"></i></button>
+          <h2 class="type-text">Dessert wines</h2>
+          <p class="category-caption">For the sweet tooth, pair this with your favorite dessert. <br><span style="font-size: 70%;">NOTE: Style will be ignored.</span></p>
         </div>
       </div>
     </div>
@@ -101,6 +106,10 @@
       <span class="hidden-phone">All finished. Show me the wines!</span>
       <span class="visible-phone">Show me the wines!</span>
     </button>
+
+    <div id="loading-text" class="hide container" style="text-align:center;">
+      <p class="category-caption">Loading, please wait...</p>
+    </div>
 
   </div>
 </div>
