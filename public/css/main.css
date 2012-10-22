@@ -1241,11 +1241,11 @@ form.bs-docs-example {
 }
 
 .button-nav a.pic-btn:active, .button-nav a.pic-btn.active {
-  box-shadow: inset 0px 4px 10px #888;
+  box-shadow: inset 0px 4px 10px #444;
 }
 
 .button-nav a.pic-btn.active {
-  box-shadow: inset 0px 4px 10px #AAA;
+  box-shadow: inset 0px 4px 10px #555;
 }
 
 .bigbutton {
