@@ -150,10 +150,10 @@ $(function () {
       wineList.append(resetBtn);
       if (wineList.is(':hidden')) {
         wineList.fadeIn(function() {
-          goToByScroll('wine-list');
+          goToByScroll('wine-list-header-container');
         });
       } else {
-        goToByScroll('wine-list');
+        goToByScroll('wine-list-header-container');
       }
     });
   });
