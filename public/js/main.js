@@ -99,7 +99,9 @@ $(function () {
     e.preventDefault();
     var $this = $(this);
     swapChoice($this, 'type');
-    setTimeout(function(){goToByScroll('submitsearch')},250);
+    if ($('#wine-list').is(':hidden')) {
+      setTimeout(function(){goToByScroll('submitsearch')},250);
+    }
   });
 
   $('#submitsearch').on('click', function(e) {
