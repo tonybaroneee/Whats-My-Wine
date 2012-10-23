@@ -17,5 +17,7 @@
   speak: none;
 }
 
-.fonticon-glass:after { content: '\1f378'; } /* '\1f378' */
-.fonticon-dollar:after { content: '\1f4b5'; } /* '\1f4b5' */
+.fonticon-direction:after { content: '\27a2'; }
+.fonticon-globe:after { content: '\1d30d'; }
+.fonticon-glass:after { content: '\1f378'; }
+.fonticon-dollar:after { content: '\1f4b5'; }
