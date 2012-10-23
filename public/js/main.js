@@ -85,20 +85,21 @@ $(function () {
     e.preventDefault();
     var $this = $(this);
     swapChoice($this, 'price');
-    setTimeout(function(){goToByScroll('top-style')},300);;
+    setTimeout(function(){goToByScroll('top-style')},250);
   });
 
   $('.style-btn').on('click', function(e) {
     e.preventDefault();
     var $this = $(this);
     swapChoice($this, 'style');
-    setTimeout(function(){goToByScroll('top-color')},300);
+    setTimeout(function(){goToByScroll('top-color')},250);
   });
 
   $('.type-btn').on('click', function(e) {
     e.preventDefault();
     var $this = $(this);
     swapChoice($this, 'type');
+    setTimeout(function(){goToByScroll('submitsearch')},250);
   });
 
   $('#submitsearch').on('click', function(e) {
